@@ -3,12 +3,12 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-require('dotenv').config({ path: './config.env' });  // Load environment variables
+// require('dotenv').config({ path: './config.env' });  // Load environment variables
 
-console.log('DB_HOST:', process.env.DB_HOST);
-console.log('DB_USER:', process.env.DB_USER);
-console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
-console.log('DB_NAME:', process.env.DB_NAME);
+// console.log('DB_HOST:', process.env.DB_HOST);
+// console.log('DB_USER:', process.env.DB_USER);
+// console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
+// console.log('DB_NAME:', process.env.DB_NAME);
 
 
 // Initialize express app
@@ -22,10 +22,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 // MySQL connection setup
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,   // MySQL host
-  user: process.env.USER,        // MySQL username
-  password: process.env.DB_PASSWORD, // MySQL password
-  database: process.env.DB_NAME // MySQL database name
+  host: 'mysql.razs.me',   // MySQL host
+  user: 'twitter_db_user',        // MySQL username
+  password: 'swEqodl2aP_PrUrU0AkA', // MySQL password
+  database: 'angular_twitter' // MySQL database name
 });
 
 // Connecting to MySQL
